@@ -10,6 +10,8 @@ import RealmSwift
 
 class Event: TextDataProtocol{
     
+    private let debug = true
+    
     private let monsterData = MonsterData()
     private let textData = TextData()
     
@@ -52,7 +54,7 @@ class Event: TextDataProtocol{
                 maxLv = 1
             }
             self.player = Player(name: "最高記録", lv: maxLv)
-            self.monster = self.monsterData.get(name: "スライム").first
+            self.monster = self.monsterData.get(name: "スライム")
             self.textList = self.textData.get(event: event)
             
         case .battleScene:
@@ -81,7 +83,7 @@ class Event: TextDataProtocol{
             
         case .attackPlayer:
             self.textList = self.textData.get(event: event)
-            self.monster?.takeAttack(player: self.player, true)
+            self.monster?.takeAttack(player: self.player)
             if monster?.death ?? false {
                 self.eventList.append(.deathMonster)
             }else{
@@ -320,39 +322,42 @@ class Event: TextDataProtocol{
         return flag
     }
     
+    private func appendMonsters(monsters: [Monster]){
+        for monster in monsters{
+            self.appendMonster(monster)
+        }
+    }
+    
+    private func appendMonster(_ monster: Monster){
+        if self.debug {
+            print("debug - Event.appedMonster(\(monster.name))")
+        }
+        self.monsterList.append(monster)
+    }
+    
     public func eventAppendMonster(){
         guard let monster = self.monster else { return }
         let nextMonsterName = monster.next
-        let appendMonsters = self.monsterData.get(name: nextMonsterName)
-        if !appendMonsters.isEmpty{
-            self.monsterList.append(appendMonsters[0])
-            let list = Set(self.monsterList)
-            let value = list.count
-            if value == 65 {
-                let nextAppendMonsters = self.monsterData.get(level: 2)
-                for nextAppendMonster in nextAppendMonsters {
-                    print("load - append \(nextAppendMonster.name)")
-                }
-                self.monsterList += nextAppendMonsters
-            }else if value == 85 {
-                let nextAppendMonsters = self.monsterData.get(level: 3)
-                for nextAppendMonster in nextAppendMonsters {
-                    print("load - append \(nextAppendMonster.name)")
-                }
-                self.monsterList += nextAppendMonsters
-            }else if value == 105 {
-                let nextAppendMonsters = self.monsterData.get(level: 4)
-                for nextAppendMonster in nextAppendMonsters {
-                    print("load - append \(nextAppendMonster.name)")
-                }
-                self.monsterList += nextAppendMonsters
-            }else if value >= 125 {
-                let nextAppendMonsters = self.monsterData.get(level: 5)
-                for nextAppendMonster in nextAppendMonsters {
-                    print("load - append \(nextAppendMonster.name)")
-                }
-                self.monsterList += nextAppendMonsters
-            }
+        let appendMonster = self.monsterData.get(name: nextMonsterName)
+        self.appendMonster(appendMonster)
+        
+        let value = Set(self.monsterList).count
+        if debug {
+            print("debug - eventAppendMonster() - value: \(value)")
+        }
+        
+        if value == 45 {
+            let nextAppendMonsters = self.monsterData.get(level: 2)
+            self.appendMonsters(monsters: nextAppendMonsters)
+        }else if value == 55 {
+            let nextAppendMonsters = self.monsterData.get(level: 3)
+            self.appendMonsters(monsters: nextAppendMonsters)
+        }else if value == 65 {
+            let nextAppendMonsters = self.monsterData.get(level: 4)
+            self.appendMonsters(monsters: nextAppendMonsters)
+        }else if value >= 75 {
+            let nextAppendMonsters = self.monsterData.get(level: 5)
+            self.appendMonsters(monsters: nextAppendMonsters)
         }
     }
 }
