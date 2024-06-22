@@ -29,6 +29,18 @@ class BattleDisplayView: DisplayView {
         case .attackMonster:
             self.animateAttackMonster()
             
+        case .magicMonster:
+            self.animateMagicMonster()
+            
+        case .chaseMonster:
+            self.animateChaseMonster()
+            
+        case .eatMonster:
+            self.animateEatMonster()
+            
+        case .ruptureMonster:
+            self.animateRuptureMonster()
+            
         case .walkPlayer:
             self.imageView.alpha = 0
             super.loadAnimateEvent(event: .auto)
@@ -48,6 +60,67 @@ class BattleDisplayView: DisplayView {
         default:
             super.loadAnimateEvent(event: event)
         }
+    }
+    
+    private func animateRuptureMonster(){
+        self.textButton.isEnabled = false
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
+            (self.audio as? BattleAudio)?.deathMonster()
+        }
+        UIView.animateKeyframes(withDuration: 0.6, delay: 0.8, animations: {
+            UIView.addKeyframe(withRelativeStartTime: 0.2, relativeDuration: 1.0, animations: {
+                self.imageView.alpha = 0
+            })
+            
+            UIView.addKeyframe(withRelativeStartTime: 0.0, relativeDuration: 0.4, animations: {
+                self.imageView.transform = CGAffineTransform(scaleX: 0.7, y: 0.7)
+            })
+            
+            UIView.addKeyframe(withRelativeStartTime: 0.4, relativeDuration: 0.6, animations: {
+                self.imageView.transform = CGAffineTransform(scaleX: 1, y: 1)
+            })
+        }, completion: { _ in
+            self.animateCompletion()
+        })
+    }
+    
+    private func animateEatMonster() {
+        self.textButton.isEnabled = false
+        UIView.animate(withDuration: 0.5, delay: 0.8, animations: {
+            self.backImageView.alpha = 0
+        }, completion: { _ in
+            self.animateCompletion()
+        })
+    }
+    
+    private func animateMagicMonster() {
+        self.textButton.isEnabled = false
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
+            (self.audio as? BattleAudio)?.magicMonster()
+        }
+        UIView.animateKeyframes(withDuration: 0.5, delay: 0.8, animations: {
+            UIView.addKeyframe(withRelativeStartTime: 0.0, relativeDuration: 0.6, animations: {
+                self.imageView.center.y -= 100
+            })
+            
+            UIView.addKeyframe(withRelativeStartTime: 0.6, relativeDuration: 0.4, animations: {
+                self.imageView.center.y += 100
+            })
+        }, completion: { _ in
+            self.animateCompletion()
+        })
+    }
+    
+    private func animateChaseMonster(){
+        self.textButton.isEnabled = false
+        self.imageView.center.x += self.imageView.bounds.width
+        self.imageView.alpha = 0
+        UIView.animate(withDuration: 0.5, delay: 0.8, animations: {
+            self.imageView.center.x -= self.imageView.bounds.width
+            self.imageView.alpha = 1
+        }, completion: { _ in
+            self.animateCompletion()
+        })
     }
     
     private func animateRespawnMonster() {

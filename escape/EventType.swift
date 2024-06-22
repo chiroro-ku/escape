@@ -25,6 +25,12 @@ enum EventType: String {
     
     case deathMonster = "deathMonster"
     case attackMonster = "attackMonster"
+    case respawnMonster = "respawnMonster"
+    case eventMonster = "eventMonster"
+    
+    enum Monster{
+        case event(Int)
+    }
     
     enum Animate: String {
         case auto = "Animate.auto"
@@ -34,10 +40,14 @@ enum EventType: String {
         case systemTransition = "Animate.systemTransition"
         case systemSelect = "Animate.systemSelect"
         
-        
         case respawnMonster = "Animate.respawnMonster"
         case deathMonster = "Animate.deathMonster"
         case attackMonster = "Animate.attackMonster"
+        case eventMonster = "Animate.eventMonster"
+        case magicMonster = "Animate.magicMonster"
+        case chaseMonster = "Animate.chaseMonster"
+        case eatMonster = "Animate.eatMonster"
+        case ruptureMonster = "Animate.ruptureMonster"
         
         case walkPlayer = "Animate.walkPlayer"
         case escapePlayer = "Animate.escapePlayer"

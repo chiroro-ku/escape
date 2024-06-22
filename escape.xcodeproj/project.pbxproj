@@ -30,6 +30,7 @@
 		F65A430C2BCE8AC300817276 /* TextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65A430B2BCE8AC300817276 /* TextButton.swift */; };
 		F65A43112BCE8B1700817276 /* Audio.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65A430E2BCE8B1700817276 /* Audio.swift */; };
 		F65A43122BCE8B1700817276 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65A430F2BCE8B1700817276 /* Button.swift */; };
+		F69CD6BF2C26ECDB000955D5 /* MonsterData.csv in Resources */ = {isa = PBXBuildFile; fileRef = F69CD6BE2C26ECDB000955D5 /* MonsterData.csv */; };
 		F6A619A12BF50F11006555AB /* DisplayViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A619A02BF50F11006555AB /* DisplayViewProtocol.swift */; };
 		F6B936642BD026850077D7FF /* ButtonProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B936632BD026850077D7FF /* ButtonProtocol.swift */; };
 		F6C883A92C14BD1C00037942 /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6C883A82C14BD1C00037942 /* HeaderView.xib */; };
@@ -51,7 +52,6 @@
 		F6F646CF2BD41B340032CD3E /* TextData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F646CE2BD41B340032CD3E /* TextData.swift */; };
 		F6F646D12BD41EDD0032CD3E /* GameText.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F646D02BD41EDC0032CD3E /* GameText.swift */; };
 		F6F646D32BD448A80032CD3E /* TextDataProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F646D22BD448A80032CD3E /* TextDataProtocol.swift */; };
-		F6F646D52BD44EF90032CD3E /* MonsterData.csv in Resources */ = {isa = PBXBuildFile; fileRef = F6F646D42BD44EF90032CD3E /* MonsterData.csv */; };
 		F6F646D92BD4DE880032CD3E /* BattleAudio.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F646D82BD4DE880032CD3E /* BattleAudio.swift */; };
 		F6F646DB2BD4DEB30032CD3E /* BattleDisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F646DA2BD4DEB30032CD3E /* BattleDisplayView.swift */; };
 /* End PBXBuildFile section */
@@ -84,6 +84,7 @@
 		F65A430B2BCE8AC300817276 /* TextButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextButton.swift; sourceTree = "<group>"; };
 		F65A430E2BCE8B1700817276 /* Audio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Audio.swift; sourceTree = "<group>"; };
 		F65A430F2BCE8B1700817276 /* Button.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
+		F69CD6BE2C26ECDB000955D5 /* MonsterData.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = MonsterData.csv; sourceTree = "<group>"; };
 		F6A619A02BF50F11006555AB /* DisplayViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayViewProtocol.swift; sourceTree = "<group>"; };
 		F6B936632BD026850077D7FF /* ButtonProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonProtocol.swift; sourceTree = "<group>"; };
 		F6C883A82C14BD1C00037942 /* HeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
@@ -105,7 +106,6 @@
 		F6F646CE2BD41B340032CD3E /* TextData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextData.swift; sourceTree = "<group>"; };
 		F6F646D02BD41EDC0032CD3E /* GameText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameText.swift; sourceTree = "<group>"; };
 		F6F646D22BD448A80032CD3E /* TextDataProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextDataProtocol.swift; sourceTree = "<group>"; };
-		F6F646D42BD44EF90032CD3E /* MonsterData.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = MonsterData.csv; path = "../../../../Library/Mobile Documents/com~apple~CloudDocs/main/GameSample/escape/MonsterData.csv"; sourceTree = "<group>"; };
 		F6F646D82BD4DE880032CD3E /* BattleAudio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleAudio.swift; sourceTree = "<group>"; };
 		F6F646DA2BD4DEB30032CD3E /* BattleDisplayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleDisplayView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -160,6 +160,7 @@
 		F65A42EE2BCE65FF00817276 /* escape */ = {
 			isa = PBXGroup;
 			children = (
+				F69CD6BE2C26ECDB000955D5 /* MonsterData.csv */,
 				F65A43072BCE68A100817276 /* Main.storyboard */,
 				F6F646B82BD3DFC30032CD3E /* EscapeViewController.swift */,
 				F65A42F32BCE65FF00817276 /* TitleViewController.swift */,
@@ -191,7 +192,6 @@
 				F6C883A82C14BD1C00037942 /* HeaderView.xib */,
 				F6C883B22C15F01400037942 /* GaugeViewProtocol.swift */,
 				F6C883B02C15E9B600037942 /* GaugeView.swift */,
-				F6F646D42BD44EF90032CD3E /* MonsterData.csv */,
 				F65650892BD2BACE0087AD10 /* maou_se_magical23.mp3 */,
 				F65650842BD2BACC0087AD10 /* maou_se_system23.mp3 */,
 				F65650862BD2BACD0087AD10 /* maou_se_system44.mp3 */,
@@ -271,7 +271,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F6F646D52BD44EF90032CD3E /* MonsterData.csv in Resources */,
 				F65650942BD2BACE0087AD10 /* maou_se_magical09.mp3 in Resources */,
 				F656508C2BD2BACE0087AD10 /* maou_se_battle19.mp3 in Resources */,
 				F6C883A92C14BD1C00037942 /* HeaderView.xib in Resources */,
@@ -283,6 +282,7 @@
 				F65650912BD2BACE0087AD10 /* nc295968.mp3 in Resources */,
 				F65650822BD160E50087AD10 /* JF-Dot-k12x10.ttf in Resources */,
 				F65A42F92BCE660200817276 /* Assets.xcassets in Resources */,
+				F69CD6BF2C26ECDB000955D5 /* MonsterData.csv in Resources */,
 				F656508D2BD2BACE0087AD10 /* maou_se_system23.mp3 in Resources */,
 				F65A42FC2BCE660200817276 /* Base in Resources */,
 				F656508F2BD2BACE0087AD10 /* maou_se_system44.mp3 in Resources */,

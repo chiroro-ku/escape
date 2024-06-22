@@ -22,14 +22,12 @@ class TextData{
             text[0].setEvent(event: .battleScene)
             
         case .systemTransition:
-            text = self.text("")
+            text = self.text(" , ")
             text[0].setEvent(event: .systemTransition)
             
         case .willBattle:
-            text = self.text("テクテク…,\(self.mn())が現れた！…,どうする？")
+            text = self.text("テクテク…")
             text[0].setEvent(event: .walkPlayer)
-            text[1].setEvent(event: .respawnMonster)
-            text[2].setEvent(event: .systemSelect)
             
         case .didBattle:
             text = self.text("テクテク…")
@@ -55,6 +53,11 @@ class TextData{
             text = self.text("バタッ！,あなたの冒険は終わってしまった")
             text[0].setEvent(event: .deathPlayer)
             
+        case .respawnMonster:
+            text = self.text("\(self.mn())が現れた！…\(self.mt()),どうする？")
+            text[0].setEvent(event: .respawnMonster)
+            text[1].setEvent(event: .systemSelect)
+            
         case .deathMonster:
             text = self.text("\(self.mn())を倒した！…")
             text[0].setEvent(event: .deathMonster)
@@ -63,11 +66,14 @@ class TextData{
             text = self.text("\(self.mn())は反撃してきた！…")
             text[0].setEvent(event: .attackMonster)
             
+        case .eventMonster:
+            break
+            
         }
         return text
     }
     
-    private func text(_ text: String) -> [GameText]{
+    public func text(_ text: String) -> [GameText]{
         let textList = text.components(separatedBy: ",")
         var gameTextList: [GameText] = []
         for text in textList{
@@ -86,12 +92,23 @@ class TextData{
     }
     
     private func mt() -> String{
-        guard let text = self.delegate?.monster?.text else{
+        
+        guard var text = self.delegate?.monster?.text else{
             return ""
         }
+        
         if text == "_"{
             return ""
         }
+        
+        var textDatas = text.components(separatedBy: "-")
+        for i in 0 ..< textDatas.count {
+            if textDatas[i] == "Name"{
+                textDatas[i] = self.mn()
+            }
+        }
+        text = textDatas.joined()
+        
         return ",\(text)"
     }
 }

@@ -18,14 +18,21 @@ class Monster: Object{
     @Persisted var imageName: String
     @Persisted var text: String
     @Persisted var event: String
-    @Persisted var eventValue: String
+    @Persisted var eventValue: Int
     @Persisted var type: String
     @Persisted var next: String
     @Persisted var level: Int
     
     private(set) var death: Bool = false
     
-    func takeAttack(player: Player, _ bool: Bool = false){
+    var eventFlag: Bool = false
+    var eventStep: Int = 0
+    
+    override var hash: Int{
+        return self.name.hash
+    }
+    
+    public func takeAttack(player: Player, _ bool: Bool = false){
         
         if bool {
             self.death = true
@@ -35,6 +42,18 @@ class Monster: Object{
         let ration = self.ration - player.lv
         let random = Int.random(in: 1...100)
         self.death = random > ration
+        
+    }
+    
+    public func setRation(value: Int){
+        try! Realm().write {
+            self.ration = value
+        }
+    }
+    
+    public func loadEventRandom(){
+        let value = Int.random(in: 0...100)
+        self.setRation(value: value)
     }
     
 }

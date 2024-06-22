@@ -17,9 +17,9 @@ class MainModel: Model {
         if value == 0{
             
         }else if value == 1 && self.event.eventList.isEmpty{
-            self.event.load(event: .attackPlayer)
+            self.event.verificationLoad(event: .attackPlayer)
         }else if value == 2 && self.event.eventList.isEmpty{
-            self.event.load(event: .escapePlayer)
+            self.event.verificationLoad(event: .escapePlayer)
         }else{
             return
         }

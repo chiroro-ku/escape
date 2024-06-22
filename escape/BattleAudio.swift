@@ -28,4 +28,8 @@ class BattleAudio: Audio {
     public func deathMonster(){
         self.play(fileName: "maou_se_8bit12", extentionName: "mp3")
     }
+    
+    public func magicMonster(){
+        self.play(fileName: "maou_se_magical09", extentionName: "mp3")
+    }
 }
