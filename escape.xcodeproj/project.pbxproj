@@ -30,7 +30,6 @@
 		F65A430C2BCE8AC300817276 /* TextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65A430B2BCE8AC300817276 /* TextButton.swift */; };
 		F65A43112BCE8B1700817276 /* Audio.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65A430E2BCE8B1700817276 /* Audio.swift */; };
 		F65A43122BCE8B1700817276 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65A430F2BCE8B1700817276 /* Button.swift */; };
-		F69CD6C12C27074B000955D5 /* MonsterData.csv in Resources */ = {isa = PBXBuildFile; fileRef = F69CD6C02C27074B000955D5 /* MonsterData.csv */; };
 		F6A619A12BF50F11006555AB /* DisplayViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A619A02BF50F11006555AB /* DisplayViewProtocol.swift */; };
 		F6B936642BD026850077D7FF /* ButtonProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B936632BD026850077D7FF /* ButtonProtocol.swift */; };
 		F6C883A92C14BD1C00037942 /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6C883A82C14BD1C00037942 /* HeaderView.xib */; };
@@ -38,6 +37,7 @@
 		F6C883AD2C14C84100037942 /* HeaderViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C883AC2C14C84100037942 /* HeaderViewProtocol.swift */; };
 		F6C883B12C15E9B600037942 /* GaugeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C883B02C15E9B600037942 /* GaugeView.swift */; };
 		F6C883B32C15F01400037942 /* GaugeViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C883B22C15F01400037942 /* GaugeViewProtocol.swift */; };
+		F6E8776F2C305DA80075ADA6 /* MonsterData.csv in Resources */ = {isa = PBXBuildFile; fileRef = F6E8776E2C305DA80075ADA6 /* MonsterData.csv */; };
 		F6F646AD2BD3B96A0032CD3E /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F646AC2BD3B96A0032CD3E /* Model.swift */; };
 		F6F646AF2BD3B9B00032CD3E /* ViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F646AE2BD3B9B00032CD3E /* ViewProtocol.swift */; };
 		F6F646B12BD3BD690032CD3E /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F646B02BD3BD690032CD3E /* Event.swift */; };
@@ -84,7 +84,6 @@
 		F65A430B2BCE8AC300817276 /* TextButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextButton.swift; sourceTree = "<group>"; };
 		F65A430E2BCE8B1700817276 /* Audio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Audio.swift; sourceTree = "<group>"; };
 		F65A430F2BCE8B1700817276 /* Button.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
-		F69CD6C02C27074B000955D5 /* MonsterData.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = MonsterData.csv; sourceTree = "<group>"; };
 		F6A619A02BF50F11006555AB /* DisplayViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayViewProtocol.swift; sourceTree = "<group>"; };
 		F6B936632BD026850077D7FF /* ButtonProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonProtocol.swift; sourceTree = "<group>"; };
 		F6C883A82C14BD1C00037942 /* HeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
@@ -92,6 +91,7 @@
 		F6C883AC2C14C84100037942 /* HeaderViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderViewProtocol.swift; sourceTree = "<group>"; };
 		F6C883B02C15E9B600037942 /* GaugeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaugeView.swift; sourceTree = "<group>"; };
 		F6C883B22C15F01400037942 /* GaugeViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaugeViewProtocol.swift; sourceTree = "<group>"; };
+		F6E8776E2C305DA80075ADA6 /* MonsterData.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = MonsterData.csv; sourceTree = "<group>"; };
 		F6F646AC2BD3B96A0032CD3E /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		F6F646AE2BD3B9B00032CD3E /* ViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewProtocol.swift; sourceTree = "<group>"; };
 		F6F646B02BD3BD690032CD3E /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
@@ -160,7 +160,7 @@
 		F65A42EE2BCE65FF00817276 /* escape */ = {
 			isa = PBXGroup;
 			children = (
-				F69CD6C02C27074B000955D5 /* MonsterData.csv */,
+				F6E8776E2C305DA80075ADA6 /* MonsterData.csv */,
 				F65A43072BCE68A100817276 /* Main.storyboard */,
 				F6F646B82BD3DFC30032CD3E /* EscapeViewController.swift */,
 				F65A42F32BCE65FF00817276 /* TitleViewController.swift */,
@@ -282,7 +282,7 @@
 				F65650912BD2BACE0087AD10 /* nc295968.mp3 in Resources */,
 				F65650822BD160E50087AD10 /* JF-Dot-k12x10.ttf in Resources */,
 				F65A42F92BCE660200817276 /* Assets.xcassets in Resources */,
-				F69CD6C12C27074B000955D5 /* MonsterData.csv in Resources */,
+				F6E8776F2C305DA80075ADA6 /* MonsterData.csv in Resources */,
 				F656508D2BD2BACE0087AD10 /* maou_se_system23.mp3 in Resources */,
 				F65A42FC2BCE660200817276 /* Base in Resources */,
 				F656508F2BD2BACE0087AD10 /* maou_se_system44.mp3 in Resources */,
@@ -527,7 +527,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.chihiro.escape;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -562,7 +562,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.chihiro.escape;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";

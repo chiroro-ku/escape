@@ -62,8 +62,9 @@ class Event: TextDataProtocol{
             self.player = Player()
             self.monster = nil
             self.textList = self.textData.get(event: event)
-            self.monsterList = self.monsterData.get(level: self.player.lv)
-//            self.monsterList = self.monsterData.get(event: "毒")
+            let monsters = self.monsterData.get(level: self.player.lv)
+//            let monsters = self.monsterData.get(event: "俊敏")
+            self.appendMonsters(monsters: monsters)
             self.eventList.append(.willBattle)
             
         case .systemTransition:
@@ -248,7 +249,13 @@ class Event: TextDataProtocol{
                 }
                 flag = true
             }else if event == .eventMonster {
-                self.load(event: .attackMonster)
+                self.textList = self.textData.get(event: .attackMonster)
+                self.player.setHp(value: self.player.hp - monster.eventValue)
+                if self.player.death {
+                    self.eventList.append(.deathPlayer)
+                }else{
+                    self.eventList.append(.fleePlayer)
+                }
                 flag = true
             }
             
@@ -326,6 +333,10 @@ class Event: TextDataProtocol{
         for monster in monsters{
             self.appendMonster(monster)
         }
+        if self.debug {
+            let count = monsters.count
+            print("debug - Event.appedMonsters() - count: \(count)")
+        }
     }
     
     private func appendMonster(_ monster: Monster){
@@ -343,20 +354,22 @@ class Event: TextDataProtocol{
         
         let value = Set(self.monsterList).count
         if debug {
-            print("debug - eventAppendMonster() - value: \(value)")
+            print("debug - Event.eventAppendMonster() - value: \(value)")
         }
-        
-        if value == 45 {
+        if value == 26 {
             let nextAppendMonsters = self.monsterData.get(level: 2)
             self.appendMonsters(monsters: nextAppendMonsters)
-        }else if value == 55 {
+        }else if value == 46 {
             let nextAppendMonsters = self.monsterData.get(level: 3)
             self.appendMonsters(monsters: nextAppendMonsters)
-        }else if value == 65 {
+        }else if value == 56 {
             let nextAppendMonsters = self.monsterData.get(level: 4)
             self.appendMonsters(monsters: nextAppendMonsters)
-        }else if value >= 75 {
+        }else if value == 66 {
             let nextAppendMonsters = self.monsterData.get(level: 5)
+            self.appendMonsters(monsters: nextAppendMonsters)
+        }else if value >= 76 {
+            let nextAppendMonsters = self.monsterData.get(level: 6)
             self.appendMonsters(monsters: nextAppendMonsters)
         }
     }
