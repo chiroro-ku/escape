@@ -12,7 +12,13 @@ class Player{
     private let limitHp = 2000
     
     private(set) var name = "冒険者"
-    private(set) var lv = 1
+    private(set) var lv = 1{
+        didSet{
+            if self.lv > 300{
+                self.lv = 300
+            }
+        }
+    }
     private(set) var hp = 100 {
         didSet{
             if self.hp < 0{

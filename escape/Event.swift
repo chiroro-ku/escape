@@ -62,8 +62,9 @@ class Event: TextDataProtocol{
             self.player = Player()
             self.monster = nil
             self.textList = self.textData.get(event: event)
-            let monsters = self.monsterData.get(level: self.player.lv)
+            let monsters = self.monsterData.get(level: 1)
 //            let monsters = self.monsterData.get(event: "俊敏")
+//            let monsters = [self.monsterData.get(name: "闇ネズミ")]
             self.appendMonsters(monsters: monsters)
             self.eventList.append(.willBattle)
             
@@ -349,8 +350,10 @@ class Event: TextDataProtocol{
     public func eventAppendMonster(){
         guard let monster = self.monster else { return }
         let nextMonsterName = monster.next
-        let appendMonster = self.monsterData.get(name: nextMonsterName)
-        self.appendMonster(appendMonster)
+        if nextMonsterName != "_" {
+            let appendMonster = self.monsterData.get(name: nextMonsterName)
+            self.appendMonster(appendMonster)
+        }
         
         let value = Set(self.monsterList).count
         if debug {
@@ -362,13 +365,13 @@ class Event: TextDataProtocol{
         }else if value == 46 {
             let nextAppendMonsters = self.monsterData.get(level: 3)
             self.appendMonsters(monsters: nextAppendMonsters)
-        }else if value == 56 {
+        }else if value == 61 {
             let nextAppendMonsters = self.monsterData.get(level: 4)
             self.appendMonsters(monsters: nextAppendMonsters)
-        }else if value == 66 {
+        }else if value == 71 {
             let nextAppendMonsters = self.monsterData.get(level: 5)
             self.appendMonsters(monsters: nextAppendMonsters)
-        }else if value >= 76 {
+        }else if value >= 73 {
             let nextAppendMonsters = self.monsterData.get(level: 6)
             self.appendMonsters(monsters: nextAppendMonsters)
         }

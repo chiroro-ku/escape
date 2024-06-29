@@ -37,7 +37,7 @@
 		F6C883AD2C14C84100037942 /* HeaderViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C883AC2C14C84100037942 /* HeaderViewProtocol.swift */; };
 		F6C883B12C15E9B600037942 /* GaugeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C883B02C15E9B600037942 /* GaugeView.swift */; };
 		F6C883B32C15F01400037942 /* GaugeViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C883B22C15F01400037942 /* GaugeViewProtocol.swift */; };
-		F6E8776F2C305DA80075ADA6 /* MonsterData.csv in Resources */ = {isa = PBXBuildFile; fileRef = F6E8776E2C305DA80075ADA6 /* MonsterData.csv */; };
+		F6E877732C3062580075ADA6 /* MonsterData.csv in Resources */ = {isa = PBXBuildFile; fileRef = F6E877722C3062580075ADA6 /* MonsterData.csv */; };
 		F6F646AD2BD3B96A0032CD3E /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F646AC2BD3B96A0032CD3E /* Model.swift */; };
 		F6F646AF2BD3B9B00032CD3E /* ViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F646AE2BD3B9B00032CD3E /* ViewProtocol.swift */; };
 		F6F646B12BD3BD690032CD3E /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F646B02BD3BD690032CD3E /* Event.swift */; };
@@ -91,7 +91,7 @@
 		F6C883AC2C14C84100037942 /* HeaderViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderViewProtocol.swift; sourceTree = "<group>"; };
 		F6C883B02C15E9B600037942 /* GaugeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaugeView.swift; sourceTree = "<group>"; };
 		F6C883B22C15F01400037942 /* GaugeViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaugeViewProtocol.swift; sourceTree = "<group>"; };
-		F6E8776E2C305DA80075ADA6 /* MonsterData.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = MonsterData.csv; sourceTree = "<group>"; };
+		F6E877722C3062580075ADA6 /* MonsterData.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = MonsterData.csv; sourceTree = "<group>"; };
 		F6F646AC2BD3B96A0032CD3E /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		F6F646AE2BD3B9B00032CD3E /* ViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewProtocol.swift; sourceTree = "<group>"; };
 		F6F646B02BD3BD690032CD3E /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
@@ -160,7 +160,7 @@
 		F65A42EE2BCE65FF00817276 /* escape */ = {
 			isa = PBXGroup;
 			children = (
-				F6E8776E2C305DA80075ADA6 /* MonsterData.csv */,
+				F6E877722C3062580075ADA6 /* MonsterData.csv */,
 				F65A43072BCE68A100817276 /* Main.storyboard */,
 				F6F646B82BD3DFC30032CD3E /* EscapeViewController.swift */,
 				F65A42F32BCE65FF00817276 /* TitleViewController.swift */,
@@ -282,7 +282,7 @@
 				F65650912BD2BACE0087AD10 /* nc295968.mp3 in Resources */,
 				F65650822BD160E50087AD10 /* JF-Dot-k12x10.ttf in Resources */,
 				F65A42F92BCE660200817276 /* Assets.xcassets in Resources */,
-				F6E8776F2C305DA80075ADA6 /* MonsterData.csv in Resources */,
+				F6E877732C3062580075ADA6 /* MonsterData.csv in Resources */,
 				F656508D2BD2BACE0087AD10 /* maou_se_system23.mp3 in Resources */,
 				F65A42FC2BCE660200817276 /* Base in Resources */,
 				F656508F2BD2BACE0087AD10 /* maou_se_system44.mp3 in Resources */,
