@@ -39,6 +39,7 @@ enum EventType: String {
         
         case systemTransition = "Animate.systemTransition"
         case systemSelect = "Animate.systemSelect"
+        case systemStress = "Animate.systemStress"
         
         case respawnMonster = "Animate.respawnMonster"
         case deathMonster = "Animate.deathMonster"

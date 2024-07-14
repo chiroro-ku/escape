@@ -15,6 +15,8 @@ class Event: TextDataProtocol{
     private let monsterData = MonsterData()
     private let textData = TextData()
     
+    private var profile: Profile?
+    
     private(set) var eventList: [EventType] = []
     private var monsterList: [Monster] = []
     private var textList: [GameText] = []
@@ -27,6 +29,10 @@ class Event: TextDataProtocol{
     
     init(){
         self.textData.delegate = self
+    }
+    
+    public func setProfile(profile: Profile){
+        self.profile = profile
     }
     
     public func load(){

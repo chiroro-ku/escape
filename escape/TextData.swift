@@ -20,6 +20,7 @@ class TextData{
         case .battleScene:
             text = self.text("ここをタップしてね！,ここをタップしてね！,テキスト送りができるよ！…,さあ、冒険の初まりです！…,モンスターを倒して強くなろう！…,でも強いモンスターからは逃げてね")
             text[0].setEvent(event: .battleScene)
+            text[1].setEvent(event: .systemStress)
             
         case .systemTransition:
             text = self.text(" , ")

@@ -9,6 +9,8 @@ import UIKit
 
 class MainViewController: EscapeViewController {
 
+    @IBOutlet weak var arrowImage: UIImageView!
+    
     @IBOutlet weak var attackButton: Button!
     @IBOutlet weak var escapeButton: Button!
     
@@ -49,7 +51,16 @@ class MainViewController: EscapeViewController {
             self.escapeButton.isEnabled = true
             self.displayView.load(event: nil)
             
+        case .systemStress:
+            self.arrowImage.alpha = 1.0
+            UIView.animate(withDuration: 1.0, delay: 0.0, options: [.repeat, .autoreverse], animations: {
+                self.arrowImage.frame.origin.y -= 10.0
+            })
+            self.displayView.load(event: nil)
+            
         default:
+            self.arrowImage.layer.removeAllAnimations()
+            self.arrowImage.alpha = 0.0
             break
         }
         return animateEvent

@@ -6,3 +6,12 @@
 //
 
 import Foundation
+import RealmSwift
+
+class Profile: Object{
+    
+    @Persisted(primaryKey: true) var id: Int
+    @Persisted var tutorial: Bool
+    @Persisted var waitingTime: Float
+    
+}

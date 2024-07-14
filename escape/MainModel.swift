@@ -26,4 +26,5 @@ class MainModel: Model {
         self.event.load()
         _ = self.view?.load()
     }
+    
 }

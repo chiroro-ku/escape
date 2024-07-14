@@ -11,7 +11,9 @@ class TitleViewController: EscapeViewController {
     
     let audio = Audio()
 
+    @IBOutlet weak var settingView: UIView!
     @IBOutlet weak var startButton: Button!
+    @IBOutlet weak var settingButton: Button!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +32,8 @@ class TitleViewController: EscapeViewController {
         
         self.startButton.delegate = self
         self.startButton.value = 1
+        self.settingButton.delegate = self
+        self.settingButton.value = 2
         
         _ = self.load()
     }
@@ -42,9 +46,11 @@ class TitleViewController: EscapeViewController {
     }
     
     override func tappedButton(_ button: Button) {
+        
         guard let value = button.value else {
             return
         }
+        
         if value == 1 {
             
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
@@ -62,6 +68,12 @@ class TitleViewController: EscapeViewController {
             })
             
         }else if value == 2 {
+            
+            if self.settingView.alpha == 1.0 {
+                self.settingView.alpha = 0.0
+            }else{
+                self.settingView.alpha = 1.0
+            }
             
         }
     }

@@ -30,6 +30,7 @@
 		F65A430C2BCE8AC300817276 /* TextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65A430B2BCE8AC300817276 /* TextButton.swift */; };
 		F65A43112BCE8B1700817276 /* Audio.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65A430E2BCE8B1700817276 /* Audio.swift */; };
 		F65A43122BCE8B1700817276 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65A430F2BCE8B1700817276 /* Button.swift */; };
+		F68E99152C441F5C003CB49B /* WindowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68E99142C441F5C003CB49B /* WindowView.swift */; };
 		F6A619A12BF50F11006555AB /* DisplayViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A619A02BF50F11006555AB /* DisplayViewProtocol.swift */; };
 		F6B936642BD026850077D7FF /* ButtonProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B936632BD026850077D7FF /* ButtonProtocol.swift */; };
 		F6C883A92C14BD1C00037942 /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6C883A82C14BD1C00037942 /* HeaderView.xib */; };
@@ -54,6 +55,7 @@
 		F6F646D32BD448A80032CD3E /* TextDataProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F646D22BD448A80032CD3E /* TextDataProtocol.swift */; };
 		F6F646D92BD4DE880032CD3E /* BattleAudio.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F646D82BD4DE880032CD3E /* BattleAudio.swift */; };
 		F6F646DB2BD4DEB30032CD3E /* BattleDisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F646DA2BD4DEB30032CD3E /* BattleDisplayView.swift */; };
+		F6FCDA382C43E8260059C9E2 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6FCDA372C43E8260059C9E2 /* Profile.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -84,6 +86,7 @@
 		F65A430B2BCE8AC300817276 /* TextButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextButton.swift; sourceTree = "<group>"; };
 		F65A430E2BCE8B1700817276 /* Audio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Audio.swift; sourceTree = "<group>"; };
 		F65A430F2BCE8B1700817276 /* Button.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
+		F68E99142C441F5C003CB49B /* WindowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowView.swift; sourceTree = "<group>"; };
 		F6A619A02BF50F11006555AB /* DisplayViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayViewProtocol.swift; sourceTree = "<group>"; };
 		F6B936632BD026850077D7FF /* ButtonProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonProtocol.swift; sourceTree = "<group>"; };
 		F6C883A82C14BD1C00037942 /* HeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
@@ -108,6 +111,7 @@
 		F6F646D22BD448A80032CD3E /* TextDataProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextDataProtocol.swift; sourceTree = "<group>"; };
 		F6F646D82BD4DE880032CD3E /* BattleAudio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleAudio.swift; sourceTree = "<group>"; };
 		F6F646DA2BD4DEB30032CD3E /* BattleDisplayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleDisplayView.swift; sourceTree = "<group>"; };
+		F6FCDA372C43E8260059C9E2 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,6 +190,8 @@
 				F6F646DA2BD4DEB30032CD3E /* BattleDisplayView.swift */,
 				F6A619A02BF50F11006555AB /* DisplayViewProtocol.swift */,
 				F65650982BD2D1800087AD10 /* DisplayView.swift */,
+				F6FCDA372C43E8260059C9E2 /* Profile.swift */,
+				F68E99142C441F5C003CB49B /* WindowView.swift */,
 				F65650962BD2D0A90087AD10 /* DisplayView.xib */,
 				F6C883AC2C14C84100037942 /* HeaderViewProtocol.swift */,
 				F6C883AA2C14C25B00037942 /* HeaderView.swift */,
@@ -348,6 +354,7 @@
 				F6F646DB2BD4DEB30032CD3E /* BattleDisplayView.swift in Sources */,
 				F6F646AD2BD3B96A0032CD3E /* Model.swift in Sources */,
 				F6F646D12BD41EDD0032CD3E /* GameText.swift in Sources */,
+				F6FCDA382C43E8260059C9E2 /* Profile.swift in Sources */,
 				F6C883B12C15E9B600037942 /* GaugeView.swift in Sources */,
 				F6C883AD2C14C84100037942 /* HeaderViewProtocol.swift in Sources */,
 				F6F646D92BD4DE880032CD3E /* BattleAudio.swift in Sources */,
@@ -369,6 +376,7 @@
 				F6F646B32BD3BDDD0032CD3E /* Player.swift in Sources */,
 				F65650992BD2D1800087AD10 /* DisplayView.swift in Sources */,
 				F6A619A12BF50F11006555AB /* DisplayViewProtocol.swift in Sources */,
+				F68E99152C441F5C003CB49B /* WindowView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -527,7 +535,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.4;
+				MARKETING_VERSION = 1.6;
 				PRODUCT_BUNDLE_IDENTIFIER = com.chihiro.escape;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -562,7 +570,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.4;
+				MARKETING_VERSION = 1.6;
 				PRODUCT_BUNDLE_IDENTIFIER = com.chihiro.escape;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
